@@ -1,11 +1,41 @@
-# Beautifully crafted open source icons
+# 这是一套提取自 [<i class="ai-ant-design"></i>](https://ant.design/) 的高质量图标。
 
-Premium designed icons for use in web, iOS, Android, and desktop apps. Support for SVG and web font. Completely open source, MIT licensed.
+1. 输入英文关键词搜索图标。
 
-<el-input v-model="q" :placeholder="`Search in ${icons.length} icons...`" prefix-icon="el-icon-search" size="medium" clearable></el-input>
+<el-input v-model="q" :placeholder="`共有 ${icons.length} 个图标...`" prefix-icon="el-icon-search" size="medium" clearable></el-input>
+
+2. 点击图标复制代码。
+
+<div class="Cat">
+  <el-radio-group v-model="cat">
+    <el-radio-button label="all">全部</el-radio-button>
+    <el-radio-button label="direction">方向</el-radio-button>
+    <el-radio-button label="logo">Logo</el-radio-button>
+    <el-radio-button label="other">其他</el-radio-button>
+  </el-radio-group>
+</div>
 
 <div class="IconSet">
-  <i v-for="icon in result" :key="icon.id" class="Icon" :class="`ai-${icon.id}`" @click="handleClick(icon)"></i>
+  <i
+    v-for="icon in result"
+    :key="icon.id"
+    :title="icon.name"
+    class="Icon"
+    :class="`ai-${icon.id}`"
+    @click="handleClick(icon)"
+  />
+</div>
+
+<div>
+  <el-dialog width="90%" :visible.sync="dialogVisible">
+    <div slot="title">
+      <i :class="`ai-${selectedIcon.id}`" /> {{ selectedIcon.name }}
+    </div>
+    <el-table :show-header="false" :data="selectedIconInfo">
+      <el-table-column prop="key" />
+      <el-table-column prop="value" />
+    </el-table>
+  </el-dialog>
 </div>
 
 <script>
@@ -15,38 +45,55 @@ export default {
   data() {
     return {
       icons,
-      q: ''
+      q: '',
+      cat: 'all',
+      dialogVisible: false,
+      selectedIcon: {}
     }
   },
   computed: {
     result() {
-      return !this.q ? this.icons : this.icons.filter(icon => {
-        return icon.id.indexOf(this.q) >= 0 || icon.name.indexOf(this.q) >= 0
+      return this.icons.filter(icon => {
+        return (
+          this.q ? (icon.id.indexOf(this.q) >= 0 || icon.name.indexOf(this.q) >= 0) : true
+        ) && (
+          this.cat === 'all' ? true : icon.category === this.cat
+        )
+      })
+    },
+    selectedIconInfo() {
+      return Object.keys(this.selectedIcon).map(key => {
+        return {
+          key,
+          value: this.selectedIcon[key]
+        }
       })
     }
   },
   methods: {
     handleClick(icon) {
-      const h = this.$createElement
-      this.$notify({
-        title: icon.name,
-        message: h('el-button-group', [
-          h('el-button', {
-            attrs: {
-              icon: `ai-${icon.id}`
-            }
-          }),
-          h('el-button', {
-            attrs: {
-              icon: `el-icon-download`
-            }
-          }, 'SVG')
-        ]),
-        duration: 0,
-        showClose: false,
-        position: 'bottom-left',
-        customClass: 'InfoModel'
-      })
+      this.selectedIcon = icon
+      this.dialogVisible = true
+      // const h = this.$createElement
+      // this.$notify({
+      //   title: icon.name,
+      //   message: h('el-button-group', [
+      //     h('el-button', {
+      //       attrs: {
+      //         icon: `ai-${icon.id}`
+      //       }
+      //     }),
+      //     h('el-button', {
+      //       attrs: {
+      //         icon: `el-icon-download`
+      //       }
+      //     }, 'SVG')
+      //   ]),
+      //   duration: 0,
+      //   showClose: false,
+      //   position: 'bottom-left',
+      //   customClass: 'InfoModel'
+      // })
     }
   }
 }
@@ -69,11 +116,14 @@ export default {
   transition: 500ms ease;
 
   &:hover {
-    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.1), 1px -1px 6px 3px rgba(0,0,0,0.08);
+    box-shadow: 0px 0px 9px 1px rgba(62,175,124,0.529);
   }
 }
 .InfoModel {
   right: 16px;
   width: auto;
+}
+.Cat {
+  text-align: center;
 }
 </style>
