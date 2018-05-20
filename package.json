@@ -1,6 +1,6 @@
 {
   "name": "ant-design-icons",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The premium icon font from Ant Design.",
   "license": "MIT",
   "main": "src/icons.json",
