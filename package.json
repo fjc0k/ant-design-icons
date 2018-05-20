@@ -23,7 +23,7 @@
     "svg"
   ],
   "files": [
-    "src"
+    "dist"
   ],
   "scripts": {
     "docs:dev": "vuepress dev docs",
