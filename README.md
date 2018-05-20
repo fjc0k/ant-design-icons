@@ -1,25 +1,19 @@
 # Ant Design Icons
 
-The premium icon font with 282 icons from [Ant Design](https://ant.design).
+[https://fjc0k.github.io/ant-design-icons](https://fjc0k.github.io/ant-design-icons)
 
-__Note__: All brand icons are trademarks of their respective owners. The use of these trademarks does not indicate endorsement of the trademark holder by Drifty, nor vice versa.
+`Ant Design Icons` 是一套提取自 [Ant Design](https://ant.design) 的高质量图标，你可以自由地在 React、Vue 或其他框架中使用它。
 
-Visit [https://ant.design/components/icon/](https://ant.design/components/icon/) and 
+__注意__： `Ant Design Icons` 包含了一些公司的产品商标（如：`wechat`、`github` 等），除了用于表示该公司或者该产品外，你不应该使用它们。
 
-## Install
+## 特性
 
-```bash
-# Yarn
-yarn add ant-design-icons
+- 提取自优秀的 [Ant Design](https://ant.design)。
+- 支持 [SVG](http://todo) 和 [WEB Font](http://todo)。
+- 提供开箱即用的 Vue 组件：
+  - [SVG Sprite](http://todo)
+  - [WEB Font](http://todo)
 
-# npm
-npm i ant-design-icons
-```
+## 许可
 
-## Usage
-
-```js
-import gift from 'ant-design-icons/src/svg/gift.svg'
-
-export default `<img src="${gift}" />`
-```
+[MIT](./LICENSE)
