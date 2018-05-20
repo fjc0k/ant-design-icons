@@ -8,7 +8,7 @@ __注意__： `Ant Design Icons` 包含了一些公司的产品商标（如：`w
 
 ## 特性
 
-- 提取自优秀的 [Ant Design](https://ant.design)。
+- 提取自优秀的 [Ant Design](https://ant.design) 并保持同步。
 - 支持 [SVG](http://todo) 和 [WEB Font](http://todo)。
 - 提供开箱即用的 Vue 组件：
   - [SVG Sprite](http://todo)
