@@ -1,12 +1,15 @@
 @font-face {
   font-family: "anticons";
-  src: url("./font/anticons.eot?v=0.0.1"); /* IE9*/
   src:
+  /* IE9 */
+  url("./font/anticons.eot?v=0.0.1");
+  src:
+  /* IE */
   url("./font/anticons.eot?v=0.0.1#iefix") format("embedded-opentype"),
+  /* Chrome, Firefox */
   url("./font/anticons.woff2?v=0.0.1") format("woff2"),
-  /* chrome、firefox */
   url("./font/anticons.woff?v=0.0.1") format("woff"),
-  /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+  /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
   url("./font/anticons.ttf?v=0.0.1") format("truetype"),
   /* iOS 4.1- */
   url("./font/anticons.svg?v=0.0.1#anticons") format("svg");
