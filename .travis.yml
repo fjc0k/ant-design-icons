@@ -13,6 +13,6 @@ deploy:
   provider: pages
   skip-cleanup: true
   github-token: $GITHUB_TOKEN
-  local-dir: .vuepress/dist
+  local-dir: docs/.vuepress/dist
   on:
     branch: master
