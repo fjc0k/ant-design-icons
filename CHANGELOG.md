@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/fjc0k/ant-design-icons/compare/v0.0.4...v1.0.0) (2018-05-30)
+
+
+### Features
+
+* generate index file ([c900e3b](https://github.com/fjc0k/ant-design-icons/commit/c900e3b))
+* set sideEffects to false ([698047b](https://github.com/fjc0k/ant-design-icons/commit/698047b))
+
+
+
 <a name="0.0.4"></a>
 ## [0.0.4](https://github.com/fjc0k/ant-design-icons/compare/v0.0.3...v0.0.4) (2018-05-20)
 
