@@ -14,5 +14,20 @@ module.exports = {
       { text: '图标', link: '/' },
       { text: '使用指南', link: '/guide' }
     ]
+  },
+  chainWebpack(config) {
+    config.module
+      .rule('js')
+        .use('babel-loader')
+          .tap(options => {
+            options.plugins = [
+              ...(options.plugins || []),
+              [require.resolve('babel-plugin-component'), {
+                libraryName: 'element-ui',
+                styleLibraryName: 'theme-chalk'
+              }]
+            ]
+            return options
+          })
   }
 }

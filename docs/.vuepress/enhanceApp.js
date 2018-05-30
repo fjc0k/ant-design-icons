@@ -1,9 +1,27 @@
-import ElementUI from 'element-ui'
+import {
+  Button,
+  Input,
+  RadioGroup,
+  RadioButton,
+  Dialog,
+  Table,
+  TableColumn,
+  Message
+} from 'element-ui'
 import VueClipboards from 'vue-clipboards'
-import './elTheme/index.css'
-import '../../dist/anticons.css'
+require('../../dist/anticons.css');
+// import '../../dist/anticons.css'
 
 export default ({ Vue }) => {
-  Vue.use(ElementUI)
+  [
+    Button,
+    Input,
+    RadioGroup,
+    RadioButton,
+    Dialog,
+    Table,
+    TableColumn
+  ].forEach(component => Vue.component(component.name, component))
+  Vue.prototype.$message = Message
   Vue.use(VueClipboards)
 }
