@@ -7,7 +7,6 @@ cache:
 install:
   - yarn
 script:
-  - yarn build
   - yarn docs:build
 deploy:
   provider: pages
