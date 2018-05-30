@@ -33,7 +33,18 @@
     </div>
     <el-table :show-header="false" :data="selectedIconInfo">
       <el-table-column prop="key" />
-      <el-table-column prop="value" />
+      <el-table-column prop="value">
+        <div slot-scope="{ row }">
+          {{ row.value }}
+          <el-button
+            size="small"
+            v-clipboard="row.value"
+            @success="$message.success('代码已复制~')"
+            @error="$message.error('代码复制失败~')">
+            复制
+          </el-button>
+        </div>
+      </el-table-column>
     </el-table>
   </el-dialog>
 </div>
@@ -62,12 +73,21 @@ export default {
       })
     },
     selectedIconInfo() {
-      return Object.keys(this.selectedIcon).map(key => {
+      const info = Object.keys(this.selectedIcon).map(key => {
         return {
           key,
           value: this.selectedIcon[key]
         }
       })
+      info.unshift({
+        key: 'SVG Sprite',
+        value: `<svg><use xlink:href="#${this.selectedIcon.id}" /></svg>`
+      })
+      info.unshift({
+        key: 'WEB Font',
+        value: `<i class="ai-${this.selectedIcon.id}" />`
+      })
+      return info
     }
   },
   methods: {

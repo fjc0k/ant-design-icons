@@ -9,6 +9,10 @@ module.exports = {
     }]
   ],
   themeConfig: {
-    repo: 'fjc0k/ant-design-icons'
+    repo: 'fjc0k/ant-design-icons',
+    nav: [
+      { text: '图标', link: '/' },
+      { text: '使用指南', link: '/guide' }
+    ]
   }
 }
