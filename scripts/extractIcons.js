@@ -37,7 +37,9 @@ class ExtractIcons {
       }, {})
     })
 
-    // Remove unexpected svg files
+    // Remove unexpected svg files & generate index.js
+    const indexFile = path.join(tmpPath, 'index.js')
+    const modules = []
     const iconIds = iconSet.reduce((iconIds, icon) => {
       iconIds.push(icon.id)
       return iconIds
@@ -48,15 +50,19 @@ class ExtractIcons {
     })
     files.forEach(file => {
       const base = path.basename(file, '.svg')
-      if (!iconIds.includes(base)) {
+      if (iconIds.includes(base)) {
+        modules.push(`export { default as ${_.camelCase(base)} } from './svg/${file}'`)
+      } else {
         fs.removeSync(path.join(SVGFilesPath, file))
       }
     })
+    fs.outputFileSync(indexFile, modules.join('\n') + '\n')
 
     // Move
     fs.emptyDirSync(this.targetPath)
     fs.moveSync(SVGFilesPath, path.join(this.targetPath, 'svg'))
     fs.moveSync(iconSetFile, path.join(this.targetPath, 'anticons.json'))
+    fs.moveSync(indexFile, path.join(this.targetPath, 'index.js'))
     fs.removeSync(tmpPath)
   }
 
