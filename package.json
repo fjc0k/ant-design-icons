@@ -3,7 +3,11 @@
   "version": "0.0.4",
   "description": "Ant Design Icons 是一套提取自 Ant Design 的高质量图标，你可以自由地在 React、Vue 或其他框架中使用它。",
   "license": "MIT",
-  "main": "src/icons.json",
+  "sideEffects": false,
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "unpkg": "dist/anticons.min.css",
+  "jsdelivr": "dist/anticons.min.css",
   "homepage": "https://github.com/fjc0k/ant-design-icons",
   "author": {
     "name": "fjc0k",
@@ -66,6 +70,7 @@
     "lint-staged": "^7.1.0",
     "lodash": "^4.17.10",
     "standard-version": "^4.3.0",
+    "vue-clipboards": "^1.2.4",
     "vuepress": "^0.8.4",
     "webfonts-generator": "^0.4.0"
   }
