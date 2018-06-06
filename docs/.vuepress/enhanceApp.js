@@ -8,9 +8,11 @@ import {
   TableColumn,
   Message
 } from 'element-ui'
+
 import VueClipboards from 'vue-clipboards'
+
 require('../../dist/anticons.css');
-// import '../../dist/anticons.css'
+require('./app.styl');
 
 export default ({ Vue }) => {
   [

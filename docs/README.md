@@ -1,4 +1,4 @@
-# 这是一套提取自 [<i class="ai-ant-design"></i>](https://ant.design/) 的高质量图标。
+# 这是一套提取自 Ant Design 的高质量图标。
 
 1. 输入英文关键词搜索图标。
 
@@ -94,56 +94,7 @@ export default {
     handleClick(icon) {
       this.selectedIcon = icon
       this.dialogVisible = true
-      // const h = this.$createElement
-      // this.$notify({
-      //   title: icon.name,
-      //   message: h('el-button-group', [
-      //     h('el-button', {
-      //       attrs: {
-      //         icon: `ai-${icon.id}`
-      //       }
-      //     }),
-      //     h('el-button', {
-      //       attrs: {
-      //         icon: `el-icon-download`
-      //       }
-      //     }, 'SVG')
-      //   ]),
-      //   duration: 0,
-      //   showClose: false,
-      //   position: 'bottom-left',
-      //   customClass: 'InfoModel'
-      // })
     }
   }
 }
 </script>
-
-<style lang="styl">
-.IconSet {
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
-.Icon {
-  font-size: 32px;
-  padding: 15px;
-  margin: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: 500ms ease;
-
-  &:hover {
-    box-shadow: 0px 0px 9px 1px rgba(62,175,124,0.529);
-  }
-}
-.InfoModel {
-  right: 16px;
-  width: auto;
-}
-.Cat {
-  text-align: center;
-}
-</style>

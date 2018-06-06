@@ -1,0 +1,163 @@
+[
+  {
+    "id": "check",
+    "name": "Check",
+    "category": "mobile",
+    "unicode": "f600",
+    "version": "2.1.11"
+  },
+  {
+    "id": "check-circle",
+    "name": "Check Circle",
+    "category": "mobile",
+    "unicode": "f601",
+    "version": "2.1.11"
+  },
+  {
+    "id": "check-circle-o",
+    "name": "Check Circle Outlined",
+    "category": "mobile",
+    "unicode": "f602",
+    "version": "2.1.11"
+  },
+  {
+    "id": "cross",
+    "name": "Cross",
+    "category": "mobile",
+    "unicode": "f603",
+    "version": "2.1.11"
+  },
+  {
+    "id": "cross-circle",
+    "name": "Cross Circle",
+    "category": "mobile",
+    "unicode": "f604",
+    "version": "2.1.11"
+  },
+  {
+    "id": "cross-circle-o",
+    "name": "Cross Circle Outlined",
+    "category": "mobile",
+    "unicode": "f605",
+    "version": "2.1.11"
+  },
+  {
+    "id": "left",
+    "name": "Left",
+    "category": "mobile",
+    "unicode": "f606",
+    "version": "2.1.11"
+  },
+  {
+    "id": "right",
+    "name": "Right",
+    "category": "mobile",
+    "unicode": "f607",
+    "version": "2.1.11"
+  },
+  {
+    "id": "down",
+    "name": "Down",
+    "category": "mobile",
+    "unicode": "f608",
+    "version": "2.1.11"
+  },
+  {
+    "id": "up",
+    "name": "Up",
+    "category": "mobile",
+    "unicode": "f609",
+    "version": "2.1.11"
+  },
+  {
+    "id": "loading",
+    "name": "Loading",
+    "category": "mobile",
+    "unicode": "f60a",
+    "version": "2.1.11"
+  },
+  {
+    "id": "search",
+    "name": "Search",
+    "category": "mobile",
+    "unicode": "f60b",
+    "version": "2.1.11"
+  },
+  {
+    "id": "ellipsis",
+    "name": "Ellipsis",
+    "category": "mobile",
+    "unicode": "f60c",
+    "version": "2.1.11"
+  },
+  {
+    "id": "ellipsis-circle",
+    "name": "Ellipsis Circle",
+    "category": "mobile",
+    "unicode": "f60d",
+    "version": "2.1.11"
+  },
+  {
+    "id": "exclamation-circle",
+    "name": "Exclamation Circle",
+    "category": "mobile",
+    "unicode": "f60e",
+    "version": "2.1.11"
+  },
+  {
+    "id": "info-circle",
+    "name": "Info Circle",
+    "category": "mobile",
+    "unicode": "f60f",
+    "version": "2.1.11"
+  },
+  {
+    "id": "question-circle",
+    "name": "Question Circle",
+    "category": "mobile",
+    "unicode": "f610",
+    "version": "2.1.11"
+  },
+  {
+    "id": "voice",
+    "name": "Voice",
+    "category": "mobile",
+    "unicode": "f611",
+    "version": "2.1.11"
+  },
+  {
+    "id": "plus",
+    "name": "Plus",
+    "category": "mobile",
+    "unicode": "f612",
+    "version": "2.1.11"
+  },
+  {
+    "id": "minus",
+    "name": "Minus",
+    "category": "mobile",
+    "unicode": "f613",
+    "version": "2.1.11"
+  },
+  {
+    "id": "dislike",
+    "name": "Dislike",
+    "category": "mobile",
+    "unicode": "f614",
+    "version": "2.1.11"
+  },
+  {
+    "id": "fail",
+    "name": "Fail",
+    "category": "mobile",
+    "unicode": "f615",
+    "version": "2.1.11"
+  },
+  {
+    "id": "success",
+    "name": "Success",
+    "category": "mobile",
+    "unicode": "f616",
+    "version": "2.1.11"
+  }
+]

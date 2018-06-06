@@ -5,9 +5,12 @@ const globby = require('globby')
 const CleanCSS = require('clean-css')
 
 class GenerateFonts {
-  constructor() {
-    this.srcPath = path.join(__dirname, '../src')
-    this.distPath = path.join(__dirname, '../dist')
+  constructor(version = 'desktop', classPrefix = 'ai', descent = 128) {
+    this.version = version
+    this.classPrefix = classPrefix
+    this.descent = descent
+    this.srcPath = path.join(__dirname, '../src', version === 'desktop' ? '' : version)
+    this.distPath = path.join(__dirname, '../dist', version === 'desktop' ? '' : version)
   }
 
   generate() {
@@ -44,7 +47,7 @@ class GenerateFonts {
       files: globby.sync(path.join(this.srcPath, 'svg/*.svg')),
       dest: path.join(this.distPath, 'font'),
       fontName: 'anticons',
-      codepoints: require('../src/anticons.json').reduce((codepoints, icon) => {
+      codepoints: require(path.join(this.srcPath, 'anticons.json')).reduce((codepoints, icon) => {
         codepoints[icon.id] = parseInt(icon.unicode, 16)
         return codepoints
       }, {}),
@@ -54,19 +57,27 @@ class GenerateFonts {
       cssFontsUrl: './font',
       types: ['svg', 'ttf', 'woff', 'woff2', 'eot'],
       templateOptions: {
-        classPrefix: 'ai-',
-        baseSelector: '.ai',
+        fontFamily: `anticons-${this.version}`,
+        classPrefix: `${this.classPrefix}-`,
+        baseSelector: `.${this.classPrefix}`,
         cssFontsUrl: './font',
         version: require('../package.json').version
       },
-      descent: 128
+      descent: this.descent
     }
   }
 }
 
-new GenerateFonts()
+new GenerateFonts('desktop', 'ai', 128)
   .generate()
   .then(
     () => console.log('success'),
     console.error
   )
+
+// new GenerateFonts('mobile', 'ami', 0)
+//   .generate()
+//   .then(
+//     () => console.log('success'),
+//     console.error
+//   )

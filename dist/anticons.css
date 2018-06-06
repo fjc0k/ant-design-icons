@@ -1,5 +1,5 @@
 @font-face {
-  font-family: "anticons";
+  font-family: "anticons-desktop";
   src:
   /* IE9 */
   url("./font/anticons.eot?v=1.0.3");
@@ -12,11 +12,11 @@
   /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
   url("./font/anticons.ttf?v=1.0.3") format("truetype"),
   /* iOS 4.1- */
-  url("./font/anticons.svg?v=1.0.3#anticons") format("svg");
+  url("./font/anticons.svg?v=1.0.3#anticons-desktop") format("svg");
 }
 
 [class*=" ai-"], [class^=ai-] {
-  font-family: "anticons" !important;
+  font-family: "anticons-desktop" !important;
   speak: none;
   display: inline-block;
   font-style: normal;
