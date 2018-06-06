@@ -3,6 +3,7 @@ const _ = require('lodash')
 const path = require('path')
 const fs = require('fs-extra')
 const axios = require('axios')
+const { version } = require('./config')
 
 class ExtractMobileIcons {
   constructor(version) {
@@ -66,7 +67,7 @@ class ExtractMobileIcons {
   }
 }
 
-new ExtractMobileIcons('2.1.11')
+new ExtractMobileIcons(version.mobile)
   .extract()
   .then(
     () => console.log('success'),

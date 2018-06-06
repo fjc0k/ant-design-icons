@@ -6,6 +6,7 @@ const fontBlast = require('font-blast')
 const globby = require('globby')
 const axios = require('axios')
 const Entities = require('html-entities').AllHtmlEntities
+const { version } = require('./config')
 
 class ExtractIcons {
   constructor(version) {
@@ -126,7 +127,7 @@ class ExtractIcons {
   }
 }
 
-new ExtractIcons('3.5.2')
+new ExtractIcons(version.desktop)
   .extract()
   .then(
     () => console.log('success'),
