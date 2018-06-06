@@ -11,6 +11,7 @@ __注意__： `Ant Design Icons` 包含了一些公司的产品商标（如：`w
 - 提取自优秀的 [Ant Design](https://ant.design) 并保持同步。
 - 支持 [WEB Font](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-web-font) 使用。
 - 支持 [SVG Sprite](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-svg-sprite) 使用。
+- 包含 [Ant Design Mobile Icons](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-ant-design-mobile-icons)。
 
 ## 许可
 

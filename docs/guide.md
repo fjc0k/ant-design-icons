@@ -45,14 +45,14 @@ import 'ant-design-icons/dist/anticons.min.css'
 `WEB Font` 使用类名去展现图标，`ant-design-icons` 的类名规则是 `ai-${图标ID}`，如：
 
 ```html
-<i class="ai-smile-o" />
-<i class="ai-loading" />
+<i class="ai-smile-o"></i>
+<i class="ai-loading"></i>
 ```
 
 效果是这样的：
 
-<i class="ai-smile-o" style="margin-right:10px;" />
-<i class="ai-loading" />
+<i class="ai-smile-o" style="margin-right:10px;"></i>
+<i class="ai-loading"></i>
 
 
 ### 样式
@@ -60,15 +60,14 @@ import 'ant-design-icons/dist/anticons.min.css'
 你可以直接使用 CSS 去更改图标大小、颜色等：
 
 ```html
-<i class="ai-smile-o" style="color:red;" />
-<i class="ai-loading" style="color:blue;font-size:20px;" />
+<i class="ai-smile-o" style="color:red;"></i>
+<i class="ai-loading" style="color:blue;font-size:20px;"></i>
 ```
 
 效果是这样的：
 
-<i class="ai-smile-o" style="color:red;margin-right:10px;" />
-<i class="ai-loading" style="color:blue;font-size:20px;" />
-
+<i class="ai-smile-o" style="color:red;margin-right:10px;"></i>
+<i class="ai-loading" style="color:blue;font-size:20px;"></i>
 
 ## 使用 SVG Sprite
 
@@ -136,4 +135,28 @@ module.exports = {
 
 效果如此：
 
-<i class="ai-smile-o" />
+<i class="ai-smile-o"></i>
+
+## 使用 Ant Design Mobile Icons
+
+`Ant Design Icons` 包含 `Ant Design Mobile` 的图标，但不支持 `WEB Font` 方式调用，仅支持 `直接调用 SVG 源图标`，或 `配合 SVG Sprite 使用`。
+
+### 安装
+
+```bash
+# yarn
+yarn add ant-design-icons
+
+# npm
+npm install ant-design-icons --save
+```
+
+### 调用 SVG 源文件
+
+```js
+import loading from 'ant-design-icons/dist/mobile/svg/loading.svg'
+import checkCircle from 'ant-design-icons/dist/mobile/svg/check-circle.svg'
+
+// 或
+import { loading, checkCircle } from 'ant-design-icons/dist/mobile'
+```
