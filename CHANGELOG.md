@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="1.1.0"></a>
+# [1.1.0](https://github.com/fjc0k/ant-design-icons/compare/v1.0.3...v1.1.0) (2018-06-06)
+
+
+### Features
+
+* add Ant Design Mobile icons ([483eb7b](https://github.com/fjc0k/ant-design-icons/commit/483eb7b))
+
+
+
 <a name="1.0.3"></a>
 ## [1.0.3](https://github.com/fjc0k/ant-design-icons/compare/v1.0.2...v1.0.3) (2018-05-30)
 
