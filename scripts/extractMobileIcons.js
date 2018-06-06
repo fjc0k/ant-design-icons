@@ -60,7 +60,7 @@ class ExtractMobileIcons {
         unicode: Number(0xF600 + index).toString(16),
         version: this.version,
         svg: icons[iconId]
-          .replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg"')
+          .replace('<svg', '<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"')
       })
     })
     return iconSet
