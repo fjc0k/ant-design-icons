@@ -2,17 +2,17 @@
   font-family: "anticons-desktop";
   src:
   /* IE9 */
-  url("./font/anticons.eot?v=1.2.1");
+  url("./font/anticons.eot?v=1.2.2");
   src:
   /* IE */
-  url("./font/anticons.eot?v=1.2.1#iefix") format("embedded-opentype"),
+  url("./font/anticons.eot?v=1.2.2#iefix") format("embedded-opentype"),
   /* Chrome, Firefox */
-  url("./font/anticons.woff2?v=1.2.1") format("woff2"),
-  url("./font/anticons.woff?v=1.2.1") format("woff"),
+  url("./font/anticons.woff2?v=1.2.2") format("woff2"),
+  url("./font/anticons.woff?v=1.2.2") format("woff"),
   /* Chrome, Firefox, Opera, Safari, Android, iOS 4.2+ */
-  url("./font/anticons.ttf?v=1.2.1") format("truetype"),
+  url("./font/anticons.ttf?v=1.2.2") format("truetype"),
   /* iOS 4.1- */
-  url("./font/anticons.svg?v=1.2.1#anticons-desktop") format("svg");
+  url("./font/anticons.svg?v=1.2.2#anticons-desktop") format("svg");
 }
 
 [class*=" ai-"], [class^=ai-] {
