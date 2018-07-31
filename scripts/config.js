@@ -1,6 +1,6 @@
 module.exports = {
   version: {
-    desktop: '3.6.1',
-    mobile: '2.1.11'
+    desktop: '3.7.3',
+    mobile: '2.2.2'
   }
 }
