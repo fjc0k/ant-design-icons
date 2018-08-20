@@ -12,6 +12,7 @@ __注意__： `Ant Design Icons` 包含了一些公司的产品商标（如：`w
 - 支持 [WEB Font](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-web-font) 使用。
 - 支持 [SVG Sprite](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-svg-sprite) 使用。
 - 包含 [Ant Design Mobile Icons](https://fjc0k.github.io/ant-design-icons/guide.html#%E4%BD%BF%E7%94%A8-ant-design-mobile-icons)。
+- 包含 [@ant-design/icons](ant-design/ant-design-icons) 的图标，你可以通过比如 `import Star from 'ant-design-icons/dist/standalone/svg/star.svg'` 的形式引入其 SVG 图标。
 
 ## 许可
 
