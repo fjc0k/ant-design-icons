@@ -29,11 +29,12 @@ class ExtractStandaloneIcons {
     extractZip(zipFile, { dir: repoDir }, err => {
       if (err) throw err
 
-      globby([repoDir + '/*/src/svg/*.svg'])
+      globby([repoDir + '/*/svg/*.svg'])
         .then(svgFiles => {
           svgFiles.forEach(svgFile => {
             const { name, ext, dir } = path.parse(svgFile)
-            const newName = name.toLowerCase().replace(/\s+/g, '-')
+            let newName = name.toLowerCase().replace(/\s+/g, '-')
+            newName = newName === 'check-close-circle' ? 'check-circle' : newName
             fs.renameSync(svgFile, path.join(dir, newName + ext))
           })
           fs.moveSync(path.parse(svgFiles[0]).dir, this.targetSVGPath)
